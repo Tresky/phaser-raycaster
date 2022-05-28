@@ -55,10 +55,10 @@ export function updateMap() {
 
     //set points
     points = [
-        this.object.getTopLeft(),
-        this.object.getTopRight(),
-        this.object.getBottomRight(),
-        this.object.getBottomLeft()
+        this.object.getTopLeft(null, true),
+        this.object.getTopRight(null, true),
+        this.object.getBottomRight(null, true),
+        this.object.getBottomLeft(null, true)
     ];
 
     //set segments
