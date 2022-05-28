@@ -1505,7 +1505,7 @@ function updateMap() {
   var points = [];
   var segments = []; //set points
 
-  points = [this.object.getTopLeft(), this.object.getTopRight(), this.object.getBottomRight(), this.object.getBottomLeft()]; //set segments
+  points = [this.object.getTopLeft(null, true), this.object.getTopRight(null, true), this.object.getBottomRight(null, true), this.object.getBottomLeft(null, true)]; //set segments
 
   for (var i = 0, length = points.length; i < length; i++) {
     if (i + 1 < length) segments.push(new Phaser.Geom.Line(points[i].x, points[i].y, points[i + 1].x, points[i + 1].y));else segments.push(new Phaser.Geom.Line(points[i].x, points[i].y, points[0].x, points[0].y));
